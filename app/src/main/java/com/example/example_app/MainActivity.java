@@ -6,11 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btn_1;
-    private Button btn_2;
+    private Button btnCorrect;
+    private Button btnIncorrect;
     private TextView text;
 
 
@@ -19,22 +20,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn_1 = (Button) findViewById(R.id.button1);
-        btn_2 = (Button) findViewById(R.id.button2);
-        text = (TextView) findViewById(R.id.textView);
-        btn_1.setOnClickListener(new View.OnClickListener() {
+        btnCorrect = (Button) findViewById(R.id.btn_correct);
+
+        btnCorrect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                text.setText("Нажата Кнопка 1");
+                Toast.makeText(MainActivity.this, R.string.correct_banner, Toast.LENGTH_SHORT).show();
             }
         });
 
-        btn_2.setOnClickListener(new View.OnClickListener() {
+        btnIncorrect = (Button) findViewById(R.id.btn_incorrect);
+
+        btnIncorrect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                text.setText("Нажата Кнопка 2");
+                Toast toast = Toast.makeText(MainActivity.this, R.string.incorrect_banner, Toast.LENGTH_SHORT);
+                toast.show();
             }
         });
+
     }
 }
 

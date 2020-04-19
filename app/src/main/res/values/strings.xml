@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">My_First_App</string>
-    <string name="button_1">Кнопка 1</string>
-    <string name="button_2">Кнопка 2</string>
+    <string name="question_text">2 + 2 = 4</string>
+    <string name="correct">Да</string>
+    <string name="incorrect">Нет</string>
+    <string name="correct_banner">Верно!</string>
+    <string name="incorrect_banner">Не верно!</string>
 </resources>
